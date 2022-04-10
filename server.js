@@ -49,13 +49,3 @@ const PORT = process.env.PORT;
 app.listen(PORT || 3000, () => {
 	console.log(`app is running on port ${PORT}`);
 });
-
-/*
-
-/ --> res = this is working
-/signin --> POST success/fail
-/register --> POST new user object
-/profile/:userID --> GET user object 
-/image --> PUT updated user object
-
-*/
