@@ -4,10 +4,9 @@ const handleRegister = (req, res, db, bcrypt) => {
 		return res.status(400).json("incorrect form submission");
 	}
 	const hash = bcrypt.hashSync(password, 10);
-	console.log(hash);
-	console.log(db);
 	// Store hash in your password DB.
 	db.transaction((trx) => {
+		console.log("!!!!!!!!");
 		trx
 			.insert({
 				hash: hash,
